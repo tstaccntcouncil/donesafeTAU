@@ -1,0 +1,814 @@
+[
+  {
+    "description": "  As a registered user\n  I want to be able to log in to the application\n  So that I can access my account",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 268377600
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1244799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the login page",
+            "match": {
+              "location": "src\\steps\\loginSteps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1857252399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I enter username \"${USERNAME}\"",
+            "match": {
+              "location": "src\\steps\\loginSteps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52311600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I enter password \"${PASSWORD}\"",
+            "match": {
+              "location": "src\\steps\\loginSteps.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24785600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click the login button",
+            "match": {
+              "location": "src\\steps\\loginSteps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1454134799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "src\\steps\\loginSteps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 601795300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I should see the welcome page",
+            "match": {
+              "location": "src\\steps\\loginSteps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 576799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1004072600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 584399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 10
+          },
+          {
+            "name": "@positive",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "features\\01-login.feature"
+  },
+  {
+    "description": "  As a logged-in user\n  I want to navigate to Settings and Users\n  So that I can manage users records",
+    "elements": [
+      {
+        "description": "",
+        "id": "post-login-navigation;navigate-to-users-within-settings",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Navigate to Users within Settings",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 525099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 781100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the welcome page",
+            "match": {
+              "location": "src\\steps\\postLoginSteps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4736600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I click the profile menu",
+            "match": {
+              "location": "src\\steps\\postLoginSteps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56732200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the settings button",
+            "match": {
+              "location": "src\\steps\\postLoginSteps.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 506375699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I am on the settings page",
+            "match": {
+              "location": "src\\steps\\postLoginSteps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 239082200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should click Users link",
+            "match": {
+              "location": "src\\steps\\postLoginSteps.ts:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 393099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1002729299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 194500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@postlogin",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "post-login-navigation",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Post-Login Navigation",
+    "tags": [
+      {
+        "name": "@postlogin",
+        "line": 1
+      }
+    ],
+    "uri": "features\\02-postLogin.feature"
+  },
+  {
+    "description": "  As a user of the application\n  I want to search for records by id\n  So that I can find and manage user details efficiently",
+    "elements": [
+      {
+        "description": "",
+        "id": "search-record;search-and-view-default-user-record",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Search and view default user record",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 510700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1260899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the search page",
+            "match": {
+              "location": "src\\steps\\searchSteps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 558899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I search for the default fullname",
+            "match": {
+              "location": "src\\steps\\searchSteps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50030499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I see the default fullname in the results",
+            "match": {
+              "location": "src\\steps\\searchSteps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384342699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I click the fullname link",
+            "match": {
+              "location": "src\\steps\\searchSteps.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41168299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see the user details",
+            "match": {
+              "location": "src\\steps\\searchSteps.ts:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 585600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1015899799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@search",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "search-record",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Search Record",
+    "tags": [
+      {
+        "name": "@search",
+        "line": 1
+      }
+    ],
+    "uri": "features\\03-search.feature"
+  },
+  {
+    "description": "  As a QA engineer\n  I want to verify that the User Details page fields are correctly validated\n  So that data integrity and format requirements are enforced",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-details-data-field-validation;verify-field-displays-the-expected-test-data",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Verify field displays the expected test data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 685699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 764299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the User Details page is displayed",
+            "match": {
+              "location": "src\\steps\\userDetailsValidationSteps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4520400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "all fields should match the test data file",
+            "match": {
+              "location": "src\\steps\\userDetailsValidationSteps.ts:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103769199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1003403299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 129000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@userDetailsValidation",
+            "line": 1
+          },
+          {
+            "name": "@dataMatch",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-details-data-field-validation",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "User Details Data Field Validation",
+    "tags": [
+      {
+        "name": "@userDetailsValidation",
+        "line": 1
+      }
+    ],
+    "uri": "features\\04-userDetailsValidation.feature"
+  },
+  {
+    "description": "  As a logged-in user\n  I want to navigate to Settings and Locations\n  So that I can view the location records",
+    "elements": [
+      {
+        "description": "",
+        "id": "location-search;navigate-to-locations-within-settings",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Navigate to Locations within Settings",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 877599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1118299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the DoneSafe page",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3920799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click the profile account menu",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39109899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click the settings menu item",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 199857500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should click the Locations link on the settings webpage",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 500288300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2002316700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@locationSearch",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "location-search;search-location-and-display-record-details",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Search location and display record details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 808399
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1014699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on the Location Search page",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3850200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I search for the default location name",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37440999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I see the default location name in the results",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1362671399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should click the location name link to view details",
+            "match": {
+              "location": "src\\steps\\locationSearchSteps.ts:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45773199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2010987699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 106999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@locationSearch",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "location-search",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Location Search",
+    "tags": [
+      {
+        "name": "@locationSearch",
+        "line": 1
+      }
+    ],
+    "uri": "features\\05-locationsearch.feature"
+  },
+  {
+    "description": "  As a QA engineer\n  I want to verify that the Location Details page fields are correctly validated\n  So that data integrity and format requirements are enforced",
+    "elements": [
+      {
+        "description": "",
+        "id": "location-details-data-field-validation;verify-each-location-field-displays-the-expected-test-data",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Verify each location field displays the expected test data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 587299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 758999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the Location Details page is displayed",
+            "match": {
+              "location": "src\\steps\\locationDetailsValidationSteps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4408900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "all location fields should match the test data file",
+            "match": {
+              "location": "src\\steps\\locationDetailsValidationSteps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71733400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1004584599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 199799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@locationDetailsValidation",
+            "line": 1
+          },
+          {
+            "name": "@dataMatch",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "location-details-data-field-validation",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Location Details Data Field Validation",
+    "tags": [
+      {
+        "name": "@locationDetailsValidation",
+        "line": 1
+      }
+    ],
+    "uri": "features\\06-locationDetailsValidation.feature"
+  }
+]

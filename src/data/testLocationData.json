@@ -1,0 +1,48 @@
+{
+  "search": {
+    "locations": [
+      {
+        "parentLocation": "Libraries",
+        "name": "Albany Library",
+        "addressLn1": "30 Kell Drive",
+        "addressLn2": "Albany",
+        "suburb": "Albany",
+        "state": "Auckland",
+        "country": "NZL",
+        "postCode": "0632",
+        "hoursWorked": "1",
+        "externalId": "00000700"
+      },
+
+      {
+        "parentLocation": "Pools and Leisure Centres",
+        "name": "Manurewa Pool and Leisure  Centre",
+        "addressLn1": "10 Sykes Rd",
+        "addressLn2": "Manurewa",
+        "suburb": "Manurewa",
+        "state": "Auckland",
+        "country": "NZL",
+        "postCode": "2102",
+        "hoursWorked": "1",
+        "externalId": "00001790"
+
+      },
+
+      {
+        "parentLocation": "Corporate Offices",
+        "name": "Auckland House",
+        "addressLn1": "135 Albert Street",
+        "addressLn2": "Auckland Central",
+        "suburb": "Auckland Central",
+        "state": "Auckland",
+        "country": "NZL",
+        "postCode": "1010",
+        "hoursWorked": "1",
+        "externalId": "00003670"
+
+      }
+    ],
+    "defaultLocation": "00000700"
+  }
+}
+

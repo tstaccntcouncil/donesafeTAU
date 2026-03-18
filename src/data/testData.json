@@ -1,0 +1,49 @@
+{
+  "search": {
+    "users": [
+      {
+        "id": "10016286",
+        "firstName": "Mary",
+        "lastName": "Legaspi",
+        "fullName": "Mary Rose Legaspi",
+        "email": "mary.legaspi@aucklandcouncil.govt.nz",
+        "role": "Employee",
+        "manager": "Roger Chong",
+        "location": "Auckland House",
+        "organization": "Quality Engineering",
+        "userType": "Tenant"
+
+      },
+      {
+        "id": "90006785",
+        "firstName": "Shiralee",
+        "lastName": "Lamb",
+        "fullName": "Shiralee Lamb",
+        "email": "shiralee.lamb@aucklandcouncil.govt.nz",
+        "role": "People Leader",
+        "manager": "Ingrid McClymont",
+        "location": "Auckland House",
+        "organization": "Business Systems",
+        "userType": "Tenant"
+      },
+      {
+        "id": "user_003",
+        "firstName": "Super",
+        "lastName": "Admin",
+        "fullName": "Super Admin",
+        "email": "admin@example.com",
+        "role": "Employee",
+        "manager": "Roger Chong",
+        "location": "Auckland House",
+        "organization": "Quality Engineering",
+        "userType": "Tenant"
+        
+      }
+    ],
+    "defaultUser": "90006785",
+    "invalidEmails": [
+      "notfound@nowhere.com",
+      "ghost@fake.org"
+    ]
+  }
+}

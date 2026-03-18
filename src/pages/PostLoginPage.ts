@@ -14,7 +14,7 @@ export class PostLoginPage extends BasePage {
     this.profileMenuItem = page.locator('li > a#header-profile-dropdown-link');
     this.settingsMenuItem = page.locator('li[tabindex="-1"] > a[href="/admin/settings"]');
     this.usersMenuItem = page.locator('a[href="/admin/settings/users"]');
-    this.welcomeHeading = page.locator('p', { hasText: 'Welcome to Donesafe' })
+    this.welcomeHeading = page.locator('p', { hasText: 'Incidents or Hazards' })
 
   }
 

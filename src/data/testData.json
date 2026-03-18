@@ -2,28 +2,28 @@
   "search": {
     "users": [
       {
-        "id": "10016286",
-        "firstName": "Mary",
-        "lastName": "Legaspi",
-        "fullName": "Mary Rose Legaspi",
-        "email": "mary.legaspi@aucklandcouncil.govt.nz",
-        "role": "Employee",
-        "manager": "Roger Chong",
-        "location": "Auckland House",
-        "organization": "Quality Engineering",
+        "id": "20017050",
+        "firstName": "Bradley",
+        "lastName": "Forsyth",
+        "fullName": "Bradley Forsyth",
+        "email": "bradley.forsyth@aucklandunlimited.com",
+        "role": "Admin",
+        "manager": "Lynn Johnson",
+        "location": "Corporate Offices",
+        "organization": "Risk, Safety & Assurance",
         "userType": "Tenant"
 
       },
       {
-        "id": "90006785",
-        "firstName": "Shiralee",
-        "lastName": "Lamb",
-        "fullName": "Shiralee Lamb",
-        "email": "shiralee.lamb@aucklandcouncil.govt.nz",
-        "role": "People Leader",
-        "manager": "Ingrid McClymont",
-        "location": "Auckland House",
-        "organization": "Business Systems",
+        "id": "98060262",
+        "firstName": "Bernard",
+        "lastName": "Hoggins",
+        "fullName": "Bernard Hoggins",
+        "email": "s9fb61e@dev_integration_test_nz.com",
+        "role": "Security Officer",
+        "manager": "Mark McGregor",
+        "location": "Aotea Centre",
+        "organization": "Security Comcen",
         "userType": "Tenant"
       },
       {
@@ -33,14 +33,14 @@
         "fullName": "Super Admin",
         "email": "admin@example.com",
         "role": "Employee",
-        "manager": "Roger Chong",
+        "manager": "Test Manager",
         "location": "Auckland House",
         "organization": "Quality Engineering",
         "userType": "Tenant"
         
       }
     ],
-    "defaultUser": "90006785",
+    "defaultUser": "98060262",
     "invalidEmails": [
       "notfound@nowhere.com",
       "ghost@fake.org"

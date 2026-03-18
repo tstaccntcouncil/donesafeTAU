@@ -6,8 +6,14 @@ export interface EnvConfig {
   slowMo: number;
 }
 
+const requireEnv = (key: string): string => {
+  const value = process.env[key];
+  if (!value) throw new Error(`Missing required env variable: ${key}`);
+  return value;
+};
+
 export const getEnvConfig = (): EnvConfig => ({
-  baseUrl: process.env.BASE_URL ?? 'https://aucklandcounciltest.pb1.donesafe.com/users/sign_in',
+  baseUrl: requireEnv('BASE_URL'),
   browserType: (process.env.BROWSER as EnvConfig['browserType']) ?? 'chromium',
   headless: process.env.HEADLESS !== 'false',
   timeout: process.env.TIMEOUT ? parseInt(process.env.TIMEOUT) : 30000,

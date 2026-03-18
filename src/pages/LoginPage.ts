@@ -18,7 +18,7 @@ export class LoginPage extends BasePage {
     this.passwordInput = page.locator('#inputPassword');
     this.loginButton = page.locator('#sign_in');
     //this.errorMessage = page.locator('#error');
-    this.welcomeHeading = page.locator('p', { hasText: 'Welcome to Donesafe' })
+    this.welcomeHeading = page.locator('p', { hasText: 'Incidents or Hazards' })
     //this.logoutButton = page.locator('.wp-block-button a');
   }
 

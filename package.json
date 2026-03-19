@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "BDD Framework with Playwright and TypeScript",
   "scripts": {
+    "pretest": "node src/utils/generate-readme.js",
     "test": "cucumber-js",
     "test:report": "cucumber-js && node src/utils/generateReport.js",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "docs": "node src/utils/generate-readme.js"
   },
   "dependencies": {
     "@playwright/test": "^1.44.0",

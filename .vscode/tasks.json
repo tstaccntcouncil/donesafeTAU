@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate README",
+      "type": "shell",
+      "command": "node generate-readme.js",
+      "group": "build",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate README (dry run)",
+      "type": "shell",
+      "command": "node generate-readme.js --dry-run",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run All Tests",
+      "type": "shell",
+      "command": "npx playwright test",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run All Tests + Regenerate README",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Playwright: Run All Tests", "Generate README"],
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

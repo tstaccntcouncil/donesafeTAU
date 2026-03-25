@@ -101,6 +101,8 @@ Then('all location fields should match the test data file', async function (this
   const errors: string[] = [];
 
   for (const [jsonKey, fieldName] of Object.entries(fieldMapping)) {
+    
+    console.log(`Validating field "${fieldName}" against test data key "${jsonKey}"...`);
     const expectedValue = location[jsonKey];
 
     if (expectedValue === undefined) {
@@ -119,16 +121,11 @@ Then('all location fields should match the test data file', async function (this
 
     // Fail on value mismatch
     //const actualValue = null;
-    let actualValue: string;
+    let actualValue: string = '';
 
       if (['parentLocation'].includes(fieldName))
         {
-           //actualValue = await locator.evaluate(
-           // (select: HTMLSelectElement) => select.options[select.selectedIndex].text);
-           actualValue = await locator.evaluate((el: HTMLSelectElement) => {
-            const selected = el.options[el.selectedIndex];
-            return selected ? selected.text : '';
-          });
+           actualValue = await this.page.locator('#user-document-location-id option:checked').textContent() ?? '';
         }
         else {
            actualValue = await locator.inputValue();

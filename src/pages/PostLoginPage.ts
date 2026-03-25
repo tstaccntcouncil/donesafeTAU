@@ -41,6 +41,7 @@ export class PostLoginPage extends BasePage {
   // ─── Assertions ─────────────────────────────────────────────────────────────
 
   async verifyWelcomePageLoaded(): Promise<void> {
+  await this.welcomeHeading.waitFor({ state: 'visible', timeout: 10000 });
   await expect(this.welcomeHeading).toBeVisible();
   }
 

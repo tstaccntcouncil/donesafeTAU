@@ -14,15 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 258225399
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1738600
+              "duration": 279011600
             }
           },
           {
@@ -35,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1851615600
+              "duration": 1980101100
             }
           },
           {
@@ -48,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 19736499
+              "duration": 17193199
             }
           },
           {
@@ -57,11 +49,11 @@
             "line": 13,
             "name": "I enter password \"${PASSWORD}\"",
             "match": {
-              "location": "src\\steps\\loginSteps.ts:54"
+              "location": "src\\steps\\loginSteps.ts:55"
             },
             "result": {
               "status": "passed",
-              "duration": 20709600
+              "duration": 18959600
             }
           },
           {
@@ -70,11 +62,11 @@
             "line": 14,
             "name": "I click the login button",
             "match": {
-              "location": "src\\steps\\loginSteps.ts:60"
+              "location": "src\\steps\\loginSteps.ts:62"
             },
             "result": {
               "status": "passed",
-              "duration": 1452050199
+              "duration": 1582621699
             }
           },
           {
@@ -83,11 +75,11 @@
             "line": 15,
             "name": "I should be redirected to the dashboard",
             "match": {
-              "location": "src\\steps\\loginSteps.ts:66"
+              "location": "src\\steps\\loginSteps.ts:69"
             },
             "result": {
               "status": "passed",
-              "duration": 622404399
+              "duration": 817976699
             }
           },
           {
@@ -96,11 +88,11 @@
             "line": 16,
             "name": "I should see the welcome page",
             "match": {
-              "location": "src\\steps\\loginSteps.ts:71"
+              "location": "src\\steps\\loginSteps.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 511099
+              "duration": 351200
             }
           },
           {
@@ -108,29 +100,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1008052499
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 553599
+              "duration": 305000
             }
           }
         ],
         "tags": [
           {
-            "name": "@login",
-            "line": 1
-          },
-          {
             "name": "@smoke",
-            "line": 10
-          },
-          {
-            "name": "@positive",
             "line": 10
           }
         ],
@@ -141,12 +117,7 @@
     "line": 2,
     "keyword": "Feature",
     "name": "Login",
-    "tags": [
-      {
-        "name": "@login",
-        "line": 1
-      }
-    ],
+    "tags": [],
     "uri": "features\\01-login.feature"
   },
   {
@@ -156,7 +127,7 @@
         "description": "",
         "id": "post-login-navigation;navigate-to-users-within-settings",
         "keyword": "Scenario",
-        "line": 10,
+        "line": 11,
         "name": "Navigate to Users within Settings",
         "steps": [
           {
@@ -164,15 +135,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 485800
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 698200
+              "duration": 389499
             }
           },
           {
@@ -185,59 +148,59 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25961399
+              "duration": 16461499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 11,
+            "line": 12,
             "name": "I click the profile menu",
             "match": {
-              "location": "src\\steps\\postLoginSteps.ts:46"
+              "location": "src\\steps\\postLoginSteps.ts:47"
             },
             "result": {
               "status": "passed",
-              "duration": 149819499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I click the settings button",
-            "match": {
-              "location": "src\\steps\\postLoginSteps.ts:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 440365099
+              "duration": 60033800
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I am on the settings page",
+            "name": "I click the settings button",
             "match": {
-              "location": "src\\steps\\postLoginSteps.ts:59"
+              "location": "src\\steps\\postLoginSteps.ts:54"
             },
             "result": {
               "status": "passed",
-              "duration": 493388199
+              "duration": 402222200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I am on the settings page",
+            "match": {
+              "location": "src\\steps\\postLoginSteps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 576423999
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 14,
+            "line": 15,
             "name": "I should click Users link",
             "match": {
-              "location": "src\\steps\\postLoginSteps.ts:68"
+              "location": "src\\steps\\postLoginSteps.ts:71"
             },
             "result": {
               "status": "passed",
-              "duration": 406899
+              "duration": 445099
             }
           },
           {
@@ -245,22 +208,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1014319400
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 128600
+              "duration": 186600
             }
           }
         ],
         "tags": [
           {
-            "name": "@postlogin",
-            "line": 1
+            "name": "@regression",
+            "line": 10
           }
         ],
         "type": "scenario"
@@ -270,12 +225,7 @@
     "line": 2,
     "keyword": "Feature",
     "name": "Post-Login Navigation",
-    "tags": [
-      {
-        "name": "@postlogin",
-        "line": 1
-      }
-    ],
+    "tags": [],
     "uri": "features\\02-postLogin.feature"
   },
   {
@@ -293,15 +243,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 486399
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1050900
+              "duration": 302800
             }
           },
           {
@@ -314,7 +256,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 374799
+              "duration": 468999
             }
           },
           {
@@ -327,7 +269,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56484599
+              "duration": 185385399
             }
           },
           {
@@ -336,11 +278,11 @@
             "line": 13,
             "name": "I see the default fullname in the results",
             "match": {
-              "location": "src\\steps\\searchSteps.ts:61"
+              "location": "src\\steps\\searchSteps.ts:62"
             },
             "result": {
               "status": "passed",
-              "duration": 1566448399
+              "duration": 1831468600
             }
           },
           {
@@ -349,11 +291,11 @@
             "line": 14,
             "name": "I click the fullname link",
             "match": {
-              "location": "src\\steps\\searchSteps.ts:75"
+              "location": "src\\steps\\searchSteps.ts:77"
             },
             "result": {
               "status": "passed",
-              "duration": 43301399
+              "duration": 42043999
             }
           },
           {
@@ -362,11 +304,11 @@
             "line": 15,
             "name": "I should see the user details",
             "match": {
-              "location": "src\\steps\\searchSteps.ts:82"
+              "location": "src\\steps\\searchSteps.ts:85"
             },
             "result": {
               "status": "passed",
-              "duration": 770199
+              "duration": 108417199
             }
           },
           {
@@ -374,22 +316,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1010457200
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 147699
+              "duration": 103599
             }
           }
         ],
         "tags": [
           {
-            "name": "@search",
-            "line": 1
+            "name": "@regression",
+            "line": 10
           }
         ],
         "type": "scenario"
@@ -399,12 +333,7 @@
     "line": 2,
     "keyword": "Feature",
     "name": "Search Record",
-    "tags": [
-      {
-        "name": "@search",
-        "line": 1
-      }
-    ],
+    "tags": [],
     "uri": "features\\03-search.feature"
   },
   {
@@ -414,7 +343,7 @@
         "description": "",
         "id": "user-details-data-field-validation;verify-field-displays-the-expected-test-data",
         "keyword": "Scenario Outline",
-        "line": 14,
+        "line": 11,
         "name": "Verify field displays the expected test data",
         "steps": [
           {
@@ -422,15 +351,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 473799
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 770099
+              "duration": 243200
             }
           },
           {
@@ -443,20 +364,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6313100
+              "duration": 5672500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
+            "line": 12,
             "name": "all fields should match the test data file",
             "match": {
               "location": "src\\steps\\userDetailsValidationSteps.ts:118"
             },
             "result": {
               "status": "passed",
-              "duration": 94230700
+              "duration": 936147799
             }
           },
           {
@@ -464,26 +385,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1014268899
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 54000
+              "duration": 74699
             }
           }
         ],
         "tags": [
           {
-            "name": "@userDetailsValidation",
-            "line": 1
-          },
-          {
-            "name": "@dataMatch",
-            "line": 13
+            "name": "@regression",
+            "line": 10
           }
         ],
         "type": "scenario"
@@ -493,12 +402,7 @@
     "line": 2,
     "keyword": "Feature",
     "name": "User Details Data Field Validation",
-    "tags": [
-      {
-        "name": "@userDetailsValidation",
-        "line": 1
-      }
-    ],
+    "tags": [],
     "uri": "features\\04-userDetailsValidation.feature"
   },
   {
@@ -516,15 +420,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 481700
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 785700
+              "duration": 236499
             }
           },
           {
@@ -537,7 +433,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5087199
+              "duration": 5069999
             }
           },
           {
@@ -550,7 +446,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41288300
+              "duration": 43841700
             }
           },
           {
@@ -563,7 +459,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 280080200
+              "duration": 429722300
             }
           },
           {
@@ -572,11 +468,11 @@
             "line": 14,
             "name": "I should click the Locations link on the settings webpage",
             "match": {
-              "location": "src\\steps\\locationSearchSteps.ts:72"
+              "location": "src\\steps\\locationSearchSteps.ts:73"
             },
             "result": {
               "status": "passed",
-              "duration": 504196299
+              "duration": 529257200
             }
           },
           {
@@ -584,22 +480,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2015986000
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 448400
+              "duration": 105199
             }
           }
         ],
         "tags": [
           {
-            "name": "@locationSearch",
-            "line": 1
+            "name": "@wip",
+            "line": 9
           }
         ],
         "type": "scenario"
@@ -616,15 +504,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 696899
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 427399
+              "duration": 222999
             }
           },
           {
@@ -633,11 +513,11 @@
             "line": 18,
             "name": "I am on the Location Search page",
             "match": {
-              "location": "src\\steps\\locationSearchSteps.ts:82"
+              "location": "src\\steps\\locationSearchSteps.ts:84"
             },
             "result": {
               "status": "passed",
-              "duration": 5051900
+              "duration": 132262800
             }
           },
           {
@@ -646,11 +526,11 @@
             "line": 19,
             "name": "I search for the default location name",
             "match": {
-              "location": "src\\steps\\locationSearchSteps.ts:91"
+              "location": "src\\steps\\locationSearchSteps.ts:93"
             },
             "result": {
               "status": "passed",
-              "duration": 44479100
+              "duration": 34586699
             }
           },
           {
@@ -663,7 +543,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1371707299
+              "duration": 1470007800
             }
           },
           {
@@ -672,11 +552,11 @@
             "line": 21,
             "name": "I should click the location name link to view details",
             "match": {
-              "location": "src\\steps\\locationSearchSteps.ts:114"
+              "location": "src\\steps\\locationSearchSteps.ts:115"
             },
             "result": {
               "status": "passed",
-              "duration": 60806099
+              "duration": 45375299
             }
           },
           {
@@ -684,22 +564,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2012565299
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 110499
+              "duration": 110599
             }
           }
         ],
         "tags": [
           {
-            "name": "@locationSearch",
-            "line": 1
+            "name": "@wip",
+            "line": 16
           }
         ],
         "type": "scenario"
@@ -709,12 +581,7 @@
     "line": 2,
     "keyword": "Feature",
     "name": "Location Search",
-    "tags": [
-      {
-        "name": "@locationSearch",
-        "line": 1
-      }
-    ],
+    "tags": [],
     "uri": "features\\05-locationsearch.feature"
   },
   {
@@ -724,7 +591,7 @@
         "description": "",
         "id": "location-details-data-field-validation;verify-each-location-field-displays-the-expected-test-data",
         "keyword": "Scenario Outline",
-        "line": 14,
+        "line": 11,
         "name": "Verify each location field displays the expected test data",
         "steps": [
           {
@@ -732,7 +599,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 813099
+              "duration": 791999
             }
           },
           {
@@ -740,7 +607,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 857800
+              "duration": 1361200
             }
           },
           {
@@ -753,20 +620,21 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5141999
+              "duration": 4896700
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
+            "line": 12,
             "name": "all location fields should match the test data file",
             "match": {
-              "location": "src\\steps\\locationDetailsValidationSteps.ts:58"
+              "location": "src\\steps\\locationDetailsValidationSteps.ts:59"
             },
             "result": {
-              "status": "passed",
-              "duration": 60651499
+              "status": "failed",
+              "duration": 316913399,
+              "error_message": "locator.evaluate: TypeError: Cannot read properties of undefined (reading 'text')\n    at eval (eval at evaluate (:290:30), <anonymous>:1:50)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at eval (:290:30)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at World.<anonymous> (C:\\Users\\legaspm\\PlaywrightProjects\\playwright-bdd-projectgalaxy\\donesafeTAU\\src\\steps\\locationDetailsValidationSteps.ts:126:40)"
             }
           },
           {
@@ -774,7 +642,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1014546500
+              "duration": 1006624200
             }
           },
           {
@@ -782,7 +650,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 171899
+              "duration": 88012099
             }
           }
         ],
@@ -792,8 +660,8 @@
             "line": 1
           },
           {
-            "name": "@dataMatch",
-            "line": 13
+            "name": "@wip",
+            "line": 10
           }
         ],
         "type": "scenario"

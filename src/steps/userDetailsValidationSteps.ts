@@ -39,8 +39,8 @@ After({ tags: '@userDetailsValidation' },  async function (this: CustomWorld, sc
 });
 
 Given('the User Details page is displayed', async function (this: CustomWorld) {
-  console.log('🟡 Navigating to User Details page...');
-  await this.userDetailsPage.navigate();
+  this.userDetailsPage = new UserDetailsPage(this.page);
+  //this.userDetailsPage.waitForLoad();
   const isLoaded = await this.userDetailsPage.isPageLoaded();
   console.log(`   Page loaded: ${isLoaded}`);
   expect(isLoaded).toBe(true);
@@ -116,6 +116,14 @@ Then('all fields should match the test data file', async function (this: CustomW
 */
 
 Then('all fields should match the test data file', async function (this: CustomWorld) {
+  this.userDetailsPage = new UserDetailsPage(this.page);
+  
+  // Wait for a key field to be visible before doing anything
+  await this.page.waitForSelector('input[id*="user-external-id"]', { 
+    state: 'visible', 
+    timeout: 30_000 
+  });
+
   const dataPath = path.resolve('src/data/testData.json');
   const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 

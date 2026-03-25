@@ -1,4 +1,4 @@
-@search
+
 Feature: Search Record 
   As a user of the application
   I want to search for records by id
@@ -7,7 +7,7 @@ Feature: Search Record
   Background:
     Given I am on the search page
 
-  # Uses the defaultUser entry from src/data/testData.json
+  @regression
   Scenario: Search and view default user record
     When  I search for the default fullname
     And   I see the default fullname in the results

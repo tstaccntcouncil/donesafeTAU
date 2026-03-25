@@ -89,6 +89,7 @@ module.exports = {
       'json:reports/cucumber-report.json',
     ],
     formatOptions: { snippetInterface: 'async-await' },
+    //tags: '@smoke or @regression and not @wip',
     paths: ['features/**/*.feature'],
   },
 };
@@ -153,12 +154,12 @@ Cucumber step definitions that map Gherkin steps to Playwright page actions.
 
 | File | Lines | Sample Steps |
 |---|---|---|
-| `src\steps\locationDetailsValidationSteps.ts` | 193 | `the Location Details page is displayed`, `all location fields should match the test data file`, `the field {string} should show a required field error` |
-| `src\steps\locationSearchSteps.ts` | 119 | `I am on the DoneSafe page`, `I click the profile account menu`, `I click the settings menu item` |
-| `src\steps\loginSteps.ts` | 83 | `I am on the login page`, `I enter username {string}`, `I enter password {string}` |
-| `src\steps\postLoginSteps.ts` | 73 | `I am on the welcome page`, `I click the profile menu`, `I click the settings button` |
-| `src\steps\searchSteps.ts` | 86 | `I am on the search page`, `I search for the default fullname`, `I see the default fullname in the results` |
-| `src\steps\userDetailsValidationSteps.ts` | 238 | `the User Details page is displayed`, `all fields should match the test data file`, `the field {string} should show a required field error` |
+| `src\steps\locationDetailsValidationSteps.ts` | 201 | `the Location Details page is displayed`, `all location fields should match the test data file`, `the field {string} should show a required field error` |
+| `src\steps\locationSearchSteps.ts` | 121 | `I am on the DoneSafe page`, `I click the profile account menu`, `I click the settings menu item` |
+| `src\steps\loginSteps.ts` | 88 | `I am on the login page`, `I enter username {string}`, `I enter password {string}` |
+| `src\steps\postLoginSteps.ts` | 76 | `I am on the welcome page`, `I click the profile menu`, `I click the settings button` |
+| `src\steps\searchSteps.ts` | 90 | `I am on the search page`, `I search for the default fullname`, `I see the default fullname in the results` |
+| `src\steps\userDetailsValidationSteps.ts` | 246 | `the User Details page is displayed`, `all fields should match the test data file`, `the field {string} should show a required field error` |
 
 ## Page Objects
 
@@ -172,7 +173,7 @@ All page objects extend `BasePage` which provides shared Playwright helpers (wai
 | `src\pages\LoginPage.ts` | 📄 Page | `navigateToLoginPage()`, `enterUsername()`, `enterPassword()`, `clickLoginButton()`, `login()` |
 | `src\pages\PostLoginPage.ts` | 📄 Page | `navigateToProfile()`, `navigateToSettings()`, `navigateToUsers()`, `verifyWelcomePageLoaded()`, `verifySettingsPageLoaded()` |
 | `src\pages\SearchPage.ts` | 📄 Page | `navigateToSearchPage()`, `enterSearchEmail()`, `enterSearchId()`, `enterSearchFullName()`, `waitForTableToLoad()` |
-| `src\pages\UserDetailsPage.ts` | 📄 Page | `getUserEmail()`, `getUserFirstName()`, `getUserLastName()`, `isPageLoaded()`, `assertFieldValue()` |
+| `src\pages\UserDetailsPage.ts` | 📄 Page | `waitForLoad()`, `getUserEmail()`, `getUserFirstName()`, `getUserLastName()`, `isPageLoaded()` |
 
 ## Test Data
 

@@ -8,6 +8,7 @@ module.exports = {
       'json:reports/cucumber-report.json',
     ],
     formatOptions: { snippetInterface: 'async-await' },
+    //tags: '@smoke or @regression and not @wip',
     paths: ['features/**/*.feature'],
   },
 };

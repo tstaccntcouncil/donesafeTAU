@@ -45,7 +45,7 @@ function resolveLocation(world: CustomWorld): LocationRecord {
 // ─── Scenario 1 ────────────────────────────────────────────────────────────────
 
 Given('I am on the DoneSafe page', async function(this: CustomWorld) {
-  //wait this.postLoginPage.verifyWelcomePageLoaded();
+  this.locationSearchPage = new LocationSearchPage(this.page);
   await this.locationSearchPage.verifyAccountProfileExists();
   console.log(`✅ DoneSafe page is shown`);
  
@@ -55,7 +55,7 @@ Given('I am on the DoneSafe page', async function(this: CustomWorld) {
 // ─── When Steps ────────────────────────────────────────────────────────────────
 
 When('I click the profile account menu', async function (this: CustomWorld)  {
-
+  this.locationSearchPage = new LocationSearchPage(this.page);
   await this.locationSearchPage.navigateToProfile();
   console.log(`✅ Profile menu clicked`);
 
@@ -63,6 +63,7 @@ When('I click the profile account menu', async function (this: CustomWorld)  {
 
 
 When('I click the settings menu item', async function (this: CustomWorld)  {
+  this.locationSearchPage = new LocationSearchPage(this.page);
   await this.locationSearchPage.navigateToSettings();
   console.log(`✅ Settings button clicked from profile menu`);
 
@@ -70,6 +71,7 @@ When('I click the settings menu item', async function (this: CustomWorld)  {
 
 
 Then('I should click the Locations link on the settings webpage', async function (this: CustomWorld)  {
+  this.locationSearchPage = new LocationSearchPage(this.page);
   await this.locationSearchPage.verifySettingsPageLoaded();
   await this.locationSearchPage.navigateToLocations();
   console.log(`✅ Locations link clicked from settings page`);
@@ -80,7 +82,7 @@ Then('I should click the Locations link on the settings webpage', async function
 
 
 Given('I am on the Location Search page', async function(this: CustomWorld) {
-  //wait this.postLoginPage.verifyWelcomePageLoaded();
+  this.locationSearchPage = new LocationSearchPage(this.page);
   await this.locationSearchPage.verifyLocationsPageLoaded();
   console.log(`✅ Location Search page is shown`);
  
@@ -89,10 +91,8 @@ Given('I am on the Location Search page', async function(this: CustomWorld) {
 
 
 When('I search for the default location name', async function (this: CustomWorld) {
-  //await this.postLoginPage.verifyUsersPageLoaded();
-  
-    this.currentLocation = testLocationData.getDefaultLocation();
-  
+    this.locationSearchPage = new LocationSearchPage(this.page);  
+    this.currentLocation = testLocationData.getDefaultLocation();  
     console.log(`📂 Test location data loaded — name: ${this.currentLocation.name}`);
     await this.locationSearchPage.enterSearchLocationName(this.currentLocation.name);
     console.log(`✅ Entered location name: ${this.currentLocation.name}`);
@@ -101,6 +101,7 @@ When('I search for the default location name', async function (this: CustomWorld
 });
 
 When('I see the default location name in the results', async function (this: CustomWorld) {
+  this.locationSearchPage = new LocationSearchPage(this.page);
   const location = resolveLocation(this);
   await this.locationSearchPage.waitForTableToLoad(location.name);
   
@@ -112,6 +113,7 @@ When('I see the default location name in the results', async function (this: Cus
 });
 
 Then('I should click the location name link to view details', async function (this: CustomWorld) {
+  this.locationSearchPage = new LocationSearchPage(this.page);
   const location = resolveLocation(this);
   await this.locationSearchPage.clickEditForRecord(location.name);
   console.log(`✅ Clicked Edit for: ${location.name}`);

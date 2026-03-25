@@ -39,6 +39,7 @@ After({ tags: '@locationDetailsValidation' },  async function (this: CustomWorld
 });
 
 Given('the Location Details page is displayed', async function (this: CustomWorld) {
+  this.locationDetailsPage = new LocationDetailsPage(this.page);
   console.log('🟡 Navigating to Location Details page...');
   await this.locationDetailsPage.navigate();
   const isLoaded = await this.locationDetailsPage.isPageLoaded();
@@ -56,6 +57,13 @@ Given('the Location Details page is displayed', async function (this: CustomWorl
 
 
 Then('all location fields should match the test data file', async function (this: CustomWorld) {
+  this.locationDetailsPage = new LocationDetailsPage(this.page);
+
+  await this.page.waitForSelector('input[name="external_uuid"]', { 
+    state: 'visible', 
+    timeout: 30_000 
+  });
+
   const dataPath = path.resolve('src/data/testLocationData.json');
   const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 

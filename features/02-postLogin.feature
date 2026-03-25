@@ -1,4 +1,4 @@
-@postlogin
+
 Feature: Post-Login Navigation
   As a logged-in user
   I want to navigate to Settings and Users
@@ -7,6 +7,7 @@ Feature: Post-Login Navigation
   Background:
     Given I am on the welcome page
 
+  @regression
   Scenario: Navigate to Users within Settings
     When I click the profile menu
     And I click the settings button

@@ -35,6 +35,7 @@ After({ tags: '@postlogin' },async function (this: CustomWorld, scenario: ITestC
 // ─── Background ────────────────────────────────────────────────────────────────
 
 Given('I am on the welcome page', async function(this: CustomWorld) {
+  this.postLoginPage = new PostLoginPage(this.page);
   await this.postLoginPage.verifyWelcomePageLoaded();
   console.log(`✅ Welcome page loaded successfully`);
  
@@ -44,19 +45,21 @@ Given('I am on the welcome page', async function(this: CustomWorld) {
 // ─── When Steps ────────────────────────────────────────────────────────────────
 
 When('I click the profile menu', async function (this: CustomWorld)  {
-
+  this.postLoginPage = new PostLoginPage(this.page);
   await this.postLoginPage.navigateToProfile();
   console.log(`✅ Profile menu clicked from Welcome page`);
 
 });
 
 When('I click the settings button', async function (this: CustomWorld)  {
+  this.postLoginPage = new PostLoginPage(this.page);
   await this.postLoginPage.navigateToSettings();
   console.log(`✅ Settings button clicked from profile menu`);
 
 });
 
 When('I am on the settings page', async function (this: CustomWorld)  {
+  this.postLoginPage = new PostLoginPage(this.page);
   await this.postLoginPage.verifySettingsPageLoaded();
   await this.postLoginPage.navigateToUsers();
   console.log(`✅ Users link clicked from settings page`);

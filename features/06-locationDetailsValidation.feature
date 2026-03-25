@@ -7,9 +7,6 @@ Feature: Location Details Data Field Validation
   Background:
     Given the Location Details page is displayed
 
- # ─────────────────────────────────────────────
-  # Data Match Verification
-  # ─────────────────────────────────────────────
-  @dataMatch
+  @wip
   Scenario Outline: Verify each location field displays the expected test data
     Then all location fields should match the test data file

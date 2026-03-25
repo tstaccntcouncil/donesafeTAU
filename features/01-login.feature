@@ -1,4 +1,4 @@
-@login
+
 Feature: Login 
   As a registered user
   I want to be able to log in to the application
@@ -7,7 +7,7 @@ Feature: Login
   Background:
     Given I am on the login page
 
-  @smoke @positive
+  @smoke 
   Scenario: Successful login with valid credentials
     When I enter username "${USERNAME}"
     And I enter password "${PASSWORD}"

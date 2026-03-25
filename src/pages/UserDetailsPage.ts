@@ -3,8 +3,6 @@ import { BasePage } from './BasePage';
 
 export class UserDetailsPage extends BasePage {
 
- readonly userDetailsForm: Locator;
-
   // Locators - User Fields
   readonly employeeIdField: Locator;
   readonly firstNameField: Locator;
@@ -22,9 +20,8 @@ export class UserDetailsPage extends BasePage {
     super(page);
 
 
-    this.userDetailsForm = page.locator('#ctl00_ContentPlaceHolder1_DetailsView1');
-
-
+    //page.waitForLoadState('domcontentloaded');
+    
     this.employeeIdField = page.locator('input[id*="user-external-id"]');
     this.firstNameField  = page.locator('input[placeholder="First Name"]');
     this.lastNameField   = page.locator('input[placeholder="Last Name"]');
@@ -35,8 +32,20 @@ export class UserDetailsPage extends BasePage {
     this.organizationField = page.locator('#tab-user-select-select-home-organisation');
     this.userTypeField = page.locator('#user-details-user-type');
 
+    
+    /*
+    this.employeeIdField = page.getByPlaceholder('user-external-id');
+    this.firstNameField  = page.getByPlaceholder('First Name');
+    this.lastNameField   = page.getByPlaceholder('Last Name');
+    this.emailField      = page.getByPlaceholder('Email Address');
+    this.roleField       = page.getByPlaceholder('#role-selector');
+    this.managerField    = page.getByPlaceholder('#tab-user-select-manager');
+    this.locationField   = page.getByPlaceholder('#tab-user-select-location');
+    this.organizationField = page.getByPlaceholder('#tab-user-select-select-home-organisation');
+    this.userTypeField = page.getByPlaceholder('#user-details-user-type');
+    */
 
-        // Dynamic lookup maps
+    // Dynamic lookup maps
     this.fieldMap = {
       employeeId:this.employeeIdField,
       firstName: this.firstNameField,
@@ -52,6 +61,13 @@ export class UserDetailsPage extends BasePage {
   }
 
   
+  async waitForLoad() {
+
+  await this.page.waitForLoadState('networkidle');
+  console.log('Title:', await this.page.title());
+  console.log('URL:', this.page.url());
+  console.log('HTML snippet:', await this.page.innerHTML('body'));
+}
   
   async getUserEmail(): Promise<string> {
     return await this.emailField.inputValue();
@@ -68,9 +84,15 @@ export class UserDetailsPage extends BasePage {
     async isPageLoaded(): Promise<boolean> {
     try {
      
-      const url = this.getCurrentUrl();
-      console.log(`Checking page load — current URL: ${url}`);
-      return url.includes('/user') || url.includes('/edit') || url.includes('/details');
+      await this.page.waitForFunction(() => document.title.includes('Details'), { timeout: 30_000 });
+
+      const title = await this.page.title();
+      console.log(`Checking page load — current title: ${title}`);
+      return title.includes('Details');
+
+      //const url = this.getCurrentUrl();
+      //console.log(`Checking page load — current URL: ${url}`);
+      //return url.includes('/user') || url.includes('/edit') || url.includes('/details');
     } catch {
       return false;
     }
@@ -92,9 +114,9 @@ export class UserDetailsPage extends BasePage {
     return locator;
   }
   
-    async navigate(): Promise<void> {
-    await expect(this.page).toHaveURL(/users/);
-  }
+  //  async navigate(): Promise<void> {
+  //  await expect(this.page).toHaveURL(/users/);
+  // }
 
 
 

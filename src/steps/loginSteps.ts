@@ -46,29 +46,34 @@ function resolveEnvVar(value: string): string {
 }
 
 When('I enter username {string}', async function (this: CustomWorld, username: string)  {
+  this.loginPage = new LoginPage(this.page);
   const resolved = resolveEnvVar(username);
   console.log(`Resolved username: ${resolved}`);
   await this.loginPage.enterUsername(resolved);
 });
 
 When('I enter password {string}', async function (this: CustomWorld, password: string) {
+  this.loginPage = new LoginPage(this.page);
   const resolved = resolveEnvVar(password);
   console.log(`Resolved password: ${'*'.repeat(resolved.length)}`);
   await this.loginPage.enterPassword(resolved);
 });
 
 When('I click the login button', async function (this: CustomWorld) {
+  this.loginPage = new LoginPage(this.page);
   await this.loginPage.clickLoginButton();
 });
 
 // ─── Then Steps ────────────────────────────────────────────────────────────────
 
 Then('I should be redirected to the dashboard', async function (this: CustomWorld) {
+  this.loginPage = new LoginPage(this.page);
   await this.loginPage.verifySuccessfulLogin();
 });
 
 
 Then('I should see the welcome page', async function (this: CustomWorld) {
+  this.loginPage = new LoginPage(this.page);
   await this.loginPage.verifyWelcomeMessage();
 });
 

@@ -49,6 +49,7 @@ Given('I am on the search page', async function (this: CustomWorld) {
 // ── When ─────────────────────────────────────────────────────────────────────
 
 When('I search for the default fullname', async function (this: CustomWorld) {
+  this.searchPage = new SearchPage(this.page);
   this.currentUser = testData.getDefaultUser();
 
   console.log(`📂 Test data loaded — fullname: ${this.currentUser.fullName}`);
@@ -59,6 +60,7 @@ When('I search for the default fullname', async function (this: CustomWorld) {
 
 
 When('I see the default fullname in the results', async function (this: CustomWorld) {
+  this.searchPage = new SearchPage(this.page);
   const user = resolveUser(this);
   await this.searchPage.waitForTableToLoad(user.fullName);
   
@@ -73,6 +75,7 @@ When('I see the default fullname in the results', async function (this: CustomWo
 
 
 Then('I click the fullname link', async function (this: CustomWorld) {
+  this.searchPage = new SearchPage(this.page);
   const user = resolveUser(this);
   await this.searchPage.clickEditForRecord(user.email);
   console.log(`✅ Clicked Edit for: ${user.email}`);
@@ -80,6 +83,7 @@ Then('I click the fullname link', async function (this: CustomWorld) {
 
 
 Then('I should see the user details', async function (this: CustomWorld) {
+  this.userDetailsPage = new UserDetailsPage(this.page);
   const isDetailPageLoaded = await this.userDetailsPage.isPageLoaded();
   console.log(`🔍 User Details page loaded: ${isDetailPageLoaded}`);
 });

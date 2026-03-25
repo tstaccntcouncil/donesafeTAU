@@ -4,7 +4,7 @@
   "description": "BDD Framework with Playwright and TypeScript",
   "scripts": {
     "pretest": "node src/utils/generateReadme.js",
-    "test": "cucumber-js && node playwrightbddanalyzer.js && node src/utils/OpenReports.js",
+    "test": "cucumber-js && node playwrightbddanalyzer.js",
     "test:report": "cucumber-js && node src/utils/generateCucumberReport.js",
     "lint": "tsc --noEmit",
     "docs": "node src/utils/generateReadme.js",

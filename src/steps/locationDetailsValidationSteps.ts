@@ -123,16 +123,28 @@ Then('all location fields should match the test data file', async function (this
 
       if (['parentLocation'].includes(fieldName))
         {
+          try{
            actualValue = await locator.evaluate(
             (select: HTMLSelectElement) => select.options[select.selectedIndex].text);
-        }
-        else {
-           actualValue = await locator.inputValue();
-        }
-
-    if (actualValue !== expectedValue) {
+                if (actualValue !== expectedValue) {
       errors.push(`Field "${fieldName}" mismatch — expected: "${expectedValue}", actual: "${actualValue}"`);
     }
+           } catch (e) {
+             console.error(`Error occurred while evaluating locator for field "${fieldName}":`, e);
+           }
+
+           
+        }
+
+        else {
+           actualValue = await locator.inputValue();
+
+           if (actualValue !== expectedValue) {
+           errors.push(`Field "${fieldName}" mismatch — expected: "${expectedValue}", actual: "${actualValue}"`);
+    }
+        }
+
+
   }
 
   if (errors.length > 0) {

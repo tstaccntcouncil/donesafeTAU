@@ -154,7 +154,7 @@ Cucumber step definitions that map Gherkin steps to Playwright page actions.
 
 | File | Lines | Sample Steps |
 |---|---|---|
-| `src\steps\locationDetailsValidationSteps.ts` | 201 | `the Location Details page is displayed`, `all location fields should match the test data file`, `the field {string} should show a required field error` |
+| `src\steps\locationDetailsValidationSteps.ts` | 213 | `the Location Details page is displayed`, `all location fields should match the test data file`, `the field {string} should show a required field error` |
 | `src\steps\locationSearchSteps.ts` | 121 | `I am on the DoneSafe page`, `I click the profile account menu`, `I click the settings menu item` |
 | `src\steps\loginSteps.ts` | 88 | `I am on the login page`, `I enter username {string}`, `I enter password {string}` |
 | `src\steps\postLoginSteps.ts` | 76 | `I am on the welcome page`, `I click the profile menu`, `I click the settings button` |
@@ -228,7 +228,7 @@ start reports/index.html
 | Script | Command |
 |---|---|
 | `pretest` | `node src/utils/generateReadme.js` |
-| `test` | `cucumber-js && node playwrightbddanalyzer.js && node src/utils/OpenReports.js` |
+| `test` | `cucumber-js && node playwrightbddanalyzer.js` |
 | `test:report` | `cucumber-js && node src/utils/generateCucumberReport.js` |
 | `lint` | `tsc --noEmit` |
 | `docs` | `node src/utils/generateReadme.js` |

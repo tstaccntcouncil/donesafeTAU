@@ -201,7 +201,9 @@ Cucumber lifecycle hooks handle browser setup, page creation, and teardown.
 |---|---|
 | `src\utils\browserManager.ts` | Playwright browser lifecycle — launch, context, and page management |
 | `src\utils\envConfig.ts` | Reads and validates environment variables from `.env` |
-| `src\utils\generateReport.js` | Generates an HTML report from Cucumber JSON output |
+| `src\utils\generateCucumberReport.js` | — |
+| `src\utils\generateReadme.js` | — |
+| `src\utils\openReports.js` | — |
 
 ## Reports
 
@@ -224,11 +226,12 @@ start reports/index.html
 
 | Script | Command |
 |---|---|
-| `pretest` | `node src/utils/generate-readme.js` |
-| `test` | `cucumber-js` |
-| `test:report` | `cucumber-js && node src/utils/generateReport.js` |
+| `pretest` | `node src/utils/generateReadme.js` |
+| `test` | `cucumber-js && node playwrightbddanalyzer.js && node src/utils/OpenReports.js` |
+| `test:report` | `cucumber-js && node src/utils/generateCucumberReport.js` |
 | `lint` | `tsc --noEmit` |
-| `docs` | `node src/utils/generate-readme.js` |
+| `docs` | `node src/utils/generateReadme.js` |
+| `analyze` | `node playwrightbddanalyzer.js` |
 
 ## CI/CD
 
@@ -274,5 +277,5 @@ jobs:
 
 ---
 
-_This README was auto-generated on **2026-03-19** by `src/utils/generate-readme.js`.  
+_This README was auto-generated on **2026-03-25** by `src/utils/generate-readme.js`.  
 Run `node src/utils/generate-readme.js` to refresh it._

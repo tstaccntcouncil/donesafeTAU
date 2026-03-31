@@ -1,8 +1,8 @@
 
 Feature: Login 
-  As a registered user
-  I want to be able to log in to the application
-  So that I can access my account
+As an admin  
+I want to log in to the application
+So that I can access and manage users, locations, and organizations
 
   Background:
     Given I am on the login page

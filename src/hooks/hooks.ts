@@ -21,6 +21,9 @@ import { LocationSearchPage } from '../pages/LocationSearchPage';
 import { LocationRecord } from 'src/data/testLocationDataLoader';
 import { LocationDetailsPage } from '@pages/LocationDetailsPage';
 import * as dotenv from 'dotenv';
+import { OrganizationRecord } from 'src/data/testOrganizationDataLoader';
+import { OrganizationSearchPage } from '@pages/OrganizationSearchPage';
+import { OrganizationDetailsPage } from '@pages/OrganizationDetailsPage';
 
 // Load env vars before anything else
 dotenv.config({ override: true });
@@ -51,6 +54,9 @@ export interface CustomWorld {
   locationSearchPage: LocationSearchPage;
   locationDetailsPage: LocationDetailsPage;
   currentLocation: LocationRecord | null;
+  currentOrganization: OrganizationRecord | null;
+  organizationSearchPage: OrganizationSearchPage;
+  organizationDetailsPage: OrganizationDetailsPage;
 }
 
 // ── Launch browser once for the whole run ───────────────────────────────────

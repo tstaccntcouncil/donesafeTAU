@@ -89,7 +89,7 @@ module.exports = {
       'json:reports/cucumber-report.json',
     ],
     formatOptions: { snippetInterface: 'async-await' },
-    //tags: '@smoke or @regression and not @wip',
+    tags: '@smoke or @regression and not @wip',
     paths: ['features/**/*.feature'],
   },
 };
@@ -142,11 +142,13 @@ Written in **Gherkin** syntax. All test data is externalised to `src/data/testDa
 | File | Scenarios | Sample Scenarios |
 |---|---|---|
 | `features\01-login.feature` | 1 | `Successful login with valid credentials` |
-| `features\02-postLogin.feature` | 1 | `Navigate to Users within Settings` |
+| `features\02-postLogin.feature` | 1 | `Access Settings through the Landing Page` |
 | `features\03-search.feature` | 1 | `Search and view default user record` |
 | `features\04-userDetailsValidation.feature` | 1 | `Verify field displays the expected test data` |
 | `features\05-locationsearch.feature` | 2 | `Navigate to Locations within Settings`, `Search location and display record details` |
 | `features\06-locationDetailsValidation.feature` | 1 | `Verify each location field displays the expected test data` |
+| `features\07-organizationSearch.feature` | 2 | `Navigate to Organizations within Settings`, `Search organization and display record details` |
+| `features\08-organizationDetailsValidation.feature` | 1 | `Verify each organization field displays the expected test data` |
 
 ## Step Definitions
 
@@ -154,10 +156,12 @@ Cucumber step definitions that map Gherkin steps to Playwright page actions.
 
 | File | Lines | Sample Steps |
 |---|---|---|
-| `src\steps\locationDetailsValidationSteps.ts` | 203 | `the Location Details page is displayed`, `all location fields should match the test data file`, `the field {string} should show a required field error` |
-| `src\steps\locationSearchSteps.ts` | 121 | `I am on the DoneSafe page`, `I click the profile account menu`, `I click the settings menu item` |
+| `src\steps\locationDetailsValidationSteps.ts` | 192 | `the Location Details page is displayed`, `all location fields should match the test data file`, `the field {string} should show a required field error` |
+| `src\steps\locationSearchSteps.ts` | 121 | `I am on a feature page`, `I click the profile account menu`, `I click the settings menu item` |
 | `src\steps\loginSteps.ts` | 88 | `I am on the login page`, `I enter username {string}`, `I enter password {string}` |
-| `src\steps\postLoginSteps.ts` | 76 | `I am on the welcome page`, `I click the profile menu`, `I click the settings button` |
+| `src\steps\organizationDetailsValidationSteps.ts` | 183 | `the Organization Details page is displayed`, `all organization fields should match the test data file`, `the field {string} should show a required field error` |
+| `src\steps\organizationSearchSteps.ts` | 119 | `I am on the DoneSafe page from any previous scenario`, `I click profile account menu`, `I click settings menu item` |
+| `src\steps\postLoginSteps.ts` | 75 | `I am on the welcome page`, `I click the profile menu`, `I click the settings button` |
 | `src\steps\searchSteps.ts` | 90 | `I am on the search page`, `I search for the default fullname`, `I see the default fullname in the results` |
 | `src\steps\userDetailsValidationSteps.ts` | 246 | `the User Details page is displayed`, `all fields should match the test data file`, `the field {string} should show a required field error` |
 
@@ -171,6 +175,8 @@ All page objects extend `BasePage` which provides shared Playwright helpers (wai
 | `src\pages\LocationDetailsPage.ts` | 📄 Page | `isPageLoaded()`, `assertFieldValue()`, `getFieldValue()`, `getField()`, `navigate()` |
 | `src\pages\LocationSearchPage.ts` | 📄 Page | `navigateToProfile()`, `navigateToSettings()`, `navigateToLocations()`, `enterSearchLocationName()`, `waitForTableToLoad()` |
 | `src\pages\LoginPage.ts` | 📄 Page | `navigateToLoginPage()`, `enterUsername()`, `enterPassword()`, `clickLoginButton()`, `login()` |
+| `src\pages\OrganizationDetailsPage.ts` | 📄 Page | `isPageLoaded()`, `assertFieldValue()`, `getFieldValue()`, `getField()` |
+| `src\pages\OrganizationSearchPage.ts` | 📄 Page | `navigateToProfile()`, `navigateToSettings()`, `navigateToOrganizations()`, `enterSearchOrganizationName()`, `waitForTableToLoad()` |
 | `src\pages\PostLoginPage.ts` | 📄 Page | `navigateToProfile()`, `navigateToSettings()`, `navigateToUsers()`, `verifyWelcomePageLoaded()`, `verifySettingsPageLoaded()` |
 | `src\pages\SearchPage.ts` | 📄 Page | `navigateToSearchPage()`, `enterSearchEmail()`, `enterSearchId()`, `enterSearchFullName()`, `waitForTableToLoad()` |
 | `src\pages\UserDetailsPage.ts` | 📄 Page | `waitForLoad()`, `getUserEmail()`, `getUserFirstName()`, `getUserLastName()`, `isPageLoaded()` |
@@ -187,6 +193,8 @@ All test data lives in `src/data/` — **no hardcoded values in feature files or
 | `src\data\testDataLoader.ts` | Typed loader with helper methods for accessing test data |
 | `src\data\testLocationData.json` | Centralised test data (no hardcoded values in steps or features) |
 | `src\data\testLocationDataLoader.ts` | Typed loader with helper methods for accessing test data |
+| `src\data\testOrganizationData.json` | Centralised test data (no hardcoded values in steps or features) |
+| `src\data\testOrganizationDataLoader.ts` | Typed loader with helper methods for accessing test data |
 
 ## Hooks
 
@@ -202,9 +210,9 @@ Cucumber lifecycle hooks handle browser setup, page creation, and teardown.
 |---|---|
 | `src\utils\browserManager.ts` | Playwright browser lifecycle — launch, context, and page management |
 | `src\utils\envConfig.ts` | Reads and validates environment variables from `.env` |
-| `src\utils\generateCucumberReport.js` | — |
-| `src\utils\generateReadme.js` | — |
-| `src\utils\openReports.js` | — |
+| `src\utils\generateCucumberReport.js` | Generates an HTML report from Cucumber JSON output |
+| `src\utils\generateReadme.js` | This utility — generates this README.md based on project structure and content |
+| `src\utils\openReports.js` | Utility to open generated reports in the default browser |
 
 ## Reports
 
@@ -278,5 +286,5 @@ jobs:
 
 ---
 
-_This README was auto-generated on **2026-03-25** by `src/utils/generate-readme.js`.  
+_This README was auto-generated on **2026-03-31** by `src/utils/generate-readme.js`.  
 Run `node src/utils/generate-readme.js` to refresh it._

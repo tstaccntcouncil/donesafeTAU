@@ -1,12 +1,12 @@
 @locationDetailsValidation
-Feature: Location Details Data Field Validation
-  As a QA engineer
-  I want to verify that the Location Details page fields are correctly validated
-  So that data integrity and format requirements are enforced
+Feature: Location Details 
+As a Test Lead  
+I want to verify the data shown on the Location Details page
+So that the displayed information matches what is expected
 
   Background:
     Given the Location Details page is displayed
 
-  @wip
+  @regression
   Scenario Outline: Verify each location field displays the expected test data
     Then all location fields should match the test data file

@@ -39,6 +39,9 @@ Thumbs.db
 # Testing
 coverage/
 .nyc_output/
+testdata.json
+testLocations.json
+testOrganizationData.json
 
 # Misc
 *.pem

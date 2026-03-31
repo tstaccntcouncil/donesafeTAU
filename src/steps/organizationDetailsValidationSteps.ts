@@ -1,6 +1,6 @@
 import { Given, When, Then, Before, After, setDefaultTimeout, ITestCaseHookParameter } from '@cucumber/cucumber';
 import { Browser, BrowserContext, Page, chromium, expect } from '@playwright/test';
-import { LocationDetailsPage } from '../pages/LocationDetailsPage';
+import { OrganizationDetailsPage } from '../pages/OrganizationDetailsPage';
 import * as fs from 'fs';
 import * as path from 'path';
 import { CustomWorld } from '../hooks/hooks'; 
@@ -21,28 +21,27 @@ const config = getEnvConfig();
 // GIVEN steps
 // ─────────────────────────────────────────────────────────────────────────────
 
-Before({ tags: '@locationDetailsValidation' }, async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
+Before({ tags: '@organizationDetailsValidation' }, async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
   console.log(`🟢 BEFORE: "${scenario.pickle.name}" — creating new context`);
   const { context, page } = await BrowserManager.newScenarioPage();
   this.context         = context;
   this.page            = page;
   this.baseUrl         = config.baseUrl; // Capture the initial URL as baseUrl
-  this.currentLocation     = null;
-  this.locationDetailsPage = new LocationDetailsPage(page);
+  this.currentOrganization     = null;
+  this.organizationDetailsPage = new OrganizationDetailsPage(page);
   console.log(`   Page state: ${this.page.isClosed() ? 'CLOSED ❌' : 'OPEN ✅'}`);
 });
 
-After({ tags: '@locationDetailsValidation' },  async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
+After({ tags: '@organizationDetailsValidation' },  async function (this: CustomWorld, scenario: ITestCaseHookParameter) {
   console.log(`🔴 AFTER: "${scenario.pickle.name}" — closing context`);
   await this.page.waitForTimeout(1000);
   // ...
 });
 
-Given('the Location Details page is displayed', async function (this: CustomWorld) {
-  this.locationDetailsPage = new LocationDetailsPage(this.page);
-  console.log('🟡 Navigating to Location Details page...');
-  await this.locationDetailsPage.navigate();
-  const isLoaded = await this.locationDetailsPage.isPageLoaded();
+Given('the Organization Details page is displayed', async function (this: CustomWorld) {
+  this.organizationDetailsPage = new OrganizationDetailsPage(this.page);
+  console.log('🟡 Navigating to Organization Details page...');
+  const isLoaded = await this.organizationDetailsPage.isPageLoaded();
   console.log(`   Page loaded: ${isLoaded}`);
   expect(isLoaded).toBe(true);
 });
@@ -56,49 +55,44 @@ Given('the Location Details page is displayed', async function (this: CustomWorl
  */
 
 
-Then('all location fields should match the test data file', async function (this: CustomWorld) {
-  this.locationDetailsPage = new LocationDetailsPage(this.page);
+Then('all organization fields should match the test data file', async function (this: CustomWorld) {
+  this.organizationDetailsPage = new OrganizationDetailsPage(this.page);
 
   await this.page.waitForSelector('input[name="external_uuid"]', { 
     state: 'visible', 
     timeout: 30_000 
   });
 
-  const dataPath = path.resolve('src/data/testLocationData.json');
+  const dataPath = path.resolve('src/data/testOrganizationData.json');
   const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
-  const locationId = raw.search.defaultLocation;
-  const location = raw.search.locations.find((l: any) => l.externalId === locationId);
-  if (!location) throw new Error(`No location found with id "${locationId}"`);
-
+  const organizationId = raw.search.defaultOrganization;
+  const organization = raw.search.organizations.find((o: any) => o.externalUuid === organizationId);
+  if (!organization) throw new Error(`No organization found with id "${organizationId}"`);
 
   const fieldMapping: Record<string, string> = {
-    parentLocation: 'parentLocation',
     name:           'name',
-    addressLn1:     'addressLn1',
-    addressLn2:     'addressLn2',
-    suburb:         'suburb',
-    state:          'state',
-    country:        'country',
-    postCode:       'postCode',
+    level:          'level',
+    parent:         'parent',
     hoursWorked:    'hoursWorked',
-    externalId:     'externalId',
+    externalUuid:   'externalUuid',
   };
 
   const errors: string[] = [];
 
   for (const [jsonKey, fieldName] of Object.entries(fieldMapping)) {
+
+    console.log(`🔍 Validating field "${fieldName}" against test data key "${jsonKey}"...`);
     
-    console.log(`Validating field "${fieldName}" against test data key "${jsonKey}"...`);
-    const expectedValue = location[jsonKey];
+    const expectedValue = organization[jsonKey];
 
     if (expectedValue === undefined) {
-      errors.push(`Field "${jsonKey}" is missing from test data for location "${locationId}"`);
+      errors.push(`Field "${jsonKey}" is missing from test data for organization "${organizationId}"`);
       continue;
     }
 
     // Fail if locator is not found/visible
-    const locator = this.locationDetailsPage.getField(fieldName);
+    const locator = this.organizationDetailsPage.getField(fieldName);
     const isVisible = await locator.isVisible();
 
     if (!isVisible) {
@@ -108,11 +102,11 @@ Then('all location fields should match the test data file', async function (this
 
     // Fail on value mismatch
     //const actualValue = null;
-    let actualValue: string = '';
+    let actualValue: string;
 
-      if (['parentLocation'].includes(fieldName))
+      if (['parent'].includes(fieldName))
         {
-           actualValue = await this.page.locator('#user-document-location-id option:checked').textContent() ?? '';
+          actualValue = await this.page.locator('#organisation-form-parent-organisation option:checked').textContent() ?? '';
         }
         else {
            actualValue = await locator.inputValue();
@@ -121,10 +115,7 @@ Then('all location fields should match the test data file', async function (this
     if (actualValue !== expectedValue) {
       errors.push(`Field "${fieldName}" mismatch — expected: "${expectedValue}", actual: "${actualValue}"`);
     }
-
-    //console.log(`Field "${fieldName}" — expected: "${expectedValue}", actual: "${actualValue}"`);
   }
- 
 
   if (errors.length > 0) {
     throw new Error(`Field validation failed:\n${errors.map((e, i) => `  ${i + 1}. ${e}`).join('\n')}`);

@@ -58,18 +58,17 @@ When('I click the settings button', async function (this: CustomWorld)  {
 
 });
 
-When('I am on the settings page', async function (this: CustomWorld)  {
+Then('I am on the settings page', async function (this: CustomWorld)  {
   this.postLoginPage = new PostLoginPage(this.page);
   await this.postLoginPage.verifySettingsPageLoaded();
-  await this.postLoginPage.navigateToUsers();
-  console.log(`✅ Users link clicked from settings page`);
+  //await this.postLoginPage.navigateToUsers();
 });
 
 
 // ─── Then Steps ────────────────────────────────────────────────────────────────
 
 Then('I should click Users link', async function (this: CustomWorld) {
-  //await this.postLoginPage.verifyUsersPageLoaded();
+  await this.postLoginPage.navigateToUsers();
   console.log(`✅ Users page loaded successfully`);
 });
 

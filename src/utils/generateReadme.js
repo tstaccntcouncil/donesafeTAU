@@ -405,7 +405,11 @@ function sectionUtilities() {
   const knownDescriptions = {
     browserManager:  'Playwright browser lifecycle — launch, context, and page management',
     envConfig:       'Reads and validates environment variables from \`.env\`',
-    generateReport:  'Generates an HTML report from Cucumber JSON output',
+    generateCucumberReport:  'Generates an HTML report from Cucumber JSON output',
+    generateReadme:    'This utility — generates this README.md based on project structure and content',
+    openReports:     'Utility to open generated reports in the default browser',
+    playwrightbddanalyzer: 'Scans the project and generates a report of BDD best practices and potential improvements',
+
   };
 
   const rows = utils.map(f => {

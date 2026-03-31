@@ -44,7 +44,7 @@ function resolveLocation(world: CustomWorld): LocationRecord {
 
 // ─── Scenario 1 ────────────────────────────────────────────────────────────────
 
-Given('I am on the DoneSafe page', async function(this: CustomWorld) {
+Given('I am on a feature page', async function(this: CustomWorld) {
   this.locationSearchPage = new LocationSearchPage(this.page);
   await this.locationSearchPage.verifyAccountProfileExists();
   console.log(`✅ DoneSafe page is shown`);

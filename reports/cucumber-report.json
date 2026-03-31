@@ -1,6 +1,6 @@
 [
   {
-    "description": "  As a registered user\n  I want to be able to log in to the application\n  So that I can access my account",
+    "description": "As an admin  \nI want to log in to the application\nSo that I can access and manage users, locations, and organizations",
     "elements": [
       {
         "description": "",
@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 269294100
+              "duration": 288484099
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1672351199
+              "duration": 3494360299
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21187899
+              "duration": 2027749099
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 20757200
+              "duration": 2031406899
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1410831599
+              "duration": 2947201599
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 604879400
+              "duration": 15061299
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 448400
+              "duration": 343100
             }
           },
           {
@@ -100,7 +100,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 465599
+              "duration": 569400
             }
           }
         ],
@@ -121,21 +121,21 @@
     "uri": "features\\01-login.feature"
   },
   {
-    "description": "  As a logged-in user\n  I want to navigate to Settings and Users\n  So that I can manage users records",
+    "description": "As an admin  \nI want to access Settings via the landing page\nSo that I can manage user, locations, and organizations records",
     "elements": [
       {
         "description": "",
-        "id": "post-login-navigation;navigate-to-users-within-settings",
+        "id": "post-login-navigation;access-settings-through-the-landing-page",
         "keyword": "Scenario",
         "line": 11,
-        "name": "Navigate to Users within Settings",
+        "name": "Access Settings through the Landing Page",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 454000
+              "duration": 334699
             }
           },
           {
@@ -148,7 +148,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13490999
+              "duration": 11116099
             }
           },
           {
@@ -161,7 +161,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 60952199
+              "duration": 2064052000
             }
           },
           {
@@ -174,12 +174,12 @@
             },
             "result": {
               "status": "passed",
-              "duration": 352905499
+              "duration": 2339016299
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "Then ",
             "line": 14,
             "name": "I am on the settings page",
             "match": {
@@ -187,7 +187,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 551713399
+              "duration": 19516600
             }
           },
           {
@@ -196,11 +196,11 @@
             "line": 15,
             "name": "I should click Users link",
             "match": {
-              "location": "src\\steps\\postLoginSteps.ts:71"
+              "location": "src\\steps\\postLoginSteps.ts:70"
             },
             "result": {
               "status": "passed",
-              "duration": 561299
+              "duration": 2062138100
             }
           },
           {
@@ -208,7 +208,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 156300
+              "duration": 191999
             }
           }
         ],
@@ -243,7 +243,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 282500
+              "duration": 542600
             }
           },
           {
@@ -256,7 +256,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 402600
+              "duration": 563000
             }
           },
           {
@@ -269,7 +269,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 178034200
+              "duration": 4078462700
             }
           },
           {
@@ -282,7 +282,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1795640299
+              "duration": 18951900
             }
           },
           {
@@ -295,7 +295,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55565099
+              "duration": 2063663899
             }
           },
           {
@@ -308,7 +308,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87468899
+              "duration": 22297000
             }
           },
           {
@@ -316,7 +316,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 103800
+              "duration": 109799
             }
           }
         ],
@@ -351,7 +351,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 251299
+              "duration": 222600
             }
           },
           {
@@ -364,7 +364,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4528899
+              "duration": 7919699
             }
           },
           {
@@ -377,7 +377,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 917592699
+              "duration": 97635599
             }
           },
           {
@@ -385,7 +385,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 89099
+              "duration": 104000
             }
           }
         ],
@@ -406,7 +406,7 @@
     "uri": "features\\04-userDetailsValidation.feature"
   },
   {
-    "description": "  As a logged-in user\n  I want to navigate to Settings and Locations\n  So that I can view the location records",
+    "description": "As an admin  \nI want to access Settings and navigate to Locations from the landing page\nSo that I can view location records",
     "elements": [
       {
         "description": "",
@@ -420,20 +420,20 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 267499
+              "duration": 306099
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 11,
-            "name": "I am on the DoneSafe page",
+            "name": "I am on a feature page",
             "match": {
               "location": "src\\steps\\locationSearchSteps.ts:47"
             },
             "result": {
               "status": "passed",
-              "duration": 3519699
+              "duration": 5849799
             }
           },
           {
@@ -446,7 +446,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 45741500
+              "duration": 2043148900
             }
           },
           {
@@ -459,7 +459,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 368256699
+              "duration": 2562016799
             }
           },
           {
@@ -472,7 +472,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 453248400
+              "duration": 2068369999
             }
           },
           {
@@ -480,13 +480,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 273799
+              "duration": 110500
             }
           }
         ],
         "tags": [
           {
-            "name": "@wip",
+            "name": "@regression",
             "line": 9
           }
         ],
@@ -504,7 +504,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 348299
+              "duration": 380299
             }
           },
           {
@@ -517,7 +517,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 112319700
+              "duration": 8014300
             }
           },
           {
@@ -530,7 +530,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29007599
+              "duration": 4060144299
             }
           },
           {
@@ -543,7 +543,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1510348200
+              "duration": 9933299
             }
           },
           {
@@ -556,7 +556,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 42868500
+              "duration": 2104556899
             }
           },
           {
@@ -564,13 +564,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 295200
+              "duration": 92700
             }
           }
         ],
         "tags": [
           {
-            "name": "@wip",
+            "name": "@regression",
             "line": 16
           }
         ],
@@ -585,11 +585,11 @@
     "uri": "features\\05-locationsearch.feature"
   },
   {
-    "description": "  As a QA engineer\n  I want to verify that the Location Details page fields are correctly validated\n  So that data integrity and format requirements are enforced",
+    "description": "As a Test Lead  \nI want to verify the data shown on the Location Details page\nSo that the displayed information matches what is expected",
     "elements": [
       {
         "description": "",
-        "id": "location-details-data-field-validation;verify-each-location-field-displays-the-expected-test-data",
+        "id": "location-details;verify-each-location-field-displays-the-expected-test-data",
         "keyword": "Scenario Outline",
         "line": 11,
         "name": "Verify each location field displays the expected test data",
@@ -599,7 +599,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 582399
+              "duration": 324800
             }
           },
           {
@@ -607,7 +607,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1256299
+              "duration": 751000
             }
           },
           {
@@ -620,7 +620,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4660700
+              "duration": 3506900
             }
           },
           {
@@ -633,7 +633,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 414418099
+              "duration": 55580999
             }
           },
           {
@@ -641,7 +641,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1007959100
+              "duration": 1003920900
             }
           },
           {
@@ -649,7 +649,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 113600
+              "duration": 157299
             }
           }
         ],
@@ -659,17 +659,17 @@
             "line": 1
           },
           {
-            "name": "@wip",
+            "name": "@regression",
             "line": 10
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "location-details-data-field-validation",
+    "id": "location-details",
     "line": 2,
     "keyword": "Feature",
-    "name": "Location Details Data Field Validation",
+    "name": "Location Details",
     "tags": [
       {
         "name": "@locationDetailsValidation",
@@ -677,5 +677,253 @@
       }
     ],
     "uri": "features\\06-locationDetailsValidation.feature"
+  },
+  {
+    "description": "  As a logged-in user\n  I want to navigate to Settings and Organizations\n  So that I can view the organization records",
+    "elements": [
+      {
+        "description": "",
+        "id": "organization-search;navigate-to-organizations-within-settings",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Navigate to Organizations within Settings",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 980199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the DoneSafe page from any previous scenario",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4941500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click profile account menu",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2042379099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click settings menu item",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2301138800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should click the Organizations link on the settings webpage",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2065823400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 173099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "organization-search;search-organization-and-display-record-details",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Search organization and display record details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 434900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on the Organization Search page",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3922499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I search for the default organization name",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4044888299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I see the default organization name in the results",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9914699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should click the organization name link to view details",
+            "match": {
+              "location": "src\\steps\\organizationSearchSteps.ts:113"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2069251099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 303200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "organization-search",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Organization Search",
+    "tags": [],
+    "uri": "features\\07-organizationSearch.feature"
+  },
+  {
+    "description": "  As a QA engineer\n  I want to verify that the Organization Details page fields are correctly validated\n  So that data integrity and format requirements are enforced",
+    "elements": [
+      {
+        "description": "",
+        "id": "organization-details-data-field-validation;verify-each-organization-field-displays-the-expected-test-data",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Verify each organization field displays the expected test data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 423300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the Organization Details page is displayed",
+            "match": {
+              "location": "src\\steps\\organizationDetailsValidationSteps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1735500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "all organization fields should match the test data file",
+            "match": {
+              "location": "src\\steps\\organizationDetailsValidationSteps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41980800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "organization-details-data-field-validation",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Organization Details Data Field Validation",
+    "tags": [],
+    "uri": "features\\08-organizationDetailsValidation.feature"
   }
 ]
